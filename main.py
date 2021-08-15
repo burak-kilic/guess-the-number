@@ -22,11 +22,13 @@ def difficulty():
 
 
 def remaining_attempt():
-    return f"Guess again.\nYou have {attempt} attempts remaining to guess the number."
+    return f"Guess again."
 
 
 attempt = difficulty()
+
 while attempt != 0:
+    print(f"You have {attempt} attempts remaining to guess the number.")
     guess = int(input("Make a guess: "))
     if guess < chosen_number:
         print("It's higher!")
